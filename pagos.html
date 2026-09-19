@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parqueadero San José - Control de Pagos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">P</span>
+            </div>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="material-icons-round">dashboard</span>
+                    <span>Panel de Control</span>
+                </a>
+                <a href="ingreso.html" class="nav-link">
+                    <span class="material-icons-round">minor_crash</span>
+                    <span>Ingresar Vehículo</span>
+                </a>
+                <a href="pagos.html" class="nav-link active">
+                    <span class="material-icons-round">payments</span>
+                    <span>Control de Pagos</span>
+                </a>
+                <a href="reportes.html" class="nav-link">
+                    <span class="material-icons-round">analytics</span>
+                    <span>Reportes Diarios</span>
+                </a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-salir HTML-logout">
+                    <span class="material-icons-round">logout</span>
+                    <span>Salir</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <header class="welcome-header">
+            <h1>Control de Pagos</h1>
+            <p class="text-muted">Liquidación y facturación de salida de vehículos</p>
+        </header>
+
+        <section class="form-card-container">
+            <div class="form-header">
+                <h2>Liquidar Tiempo de Estacionamiento</h2>
+                <p class="sub-text" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+                    Ingrese la placa para calcular el valor total a pagar.
+                </p>
+            </div>
+
+            <form id="form-control-pagos" class="styled-form">
+                <div class="form-group">
+                    <label for="pago-placa">Placa del Vehículo</label>
+                    <input type="text" id="pago-placa" placeholder="Ej: KST456" maxlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pago-tiempo">Tiempo Transcurrido (Horas / Minutos)</label>
+                    <input type="text" id="pago-tiempo" placeholder="Se calculará automáticamente" readonly style="background-color: #f8fafc; cursor: not-allowed;">
+                </div>
+
+                <div class="form-group">
+                    <label for="pago-total">Total a Pagar ($)</label>
+                    <input type="text" id="pago-total" placeholder="Valor a cobrar" readonly style="background-color: #f8fafc; font-weight: 700; color: var(--primary-blue); cursor: not-allowed;">
+                </div>
+
+                <div class="form-group">
+                    <label for="pago-metodo">Método de Pago</label>
+                    <select id="pago-metodo" required>
+                        <option value="" disabled selected>Seleccione método</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Tarjeta">Tarjeta de Crédito / Débito</option>
+                        <option value="Digital">Transferencia Digital (Nequi/Daviplata)</option>
+                    </select>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">Procesar Pago y Salida</button>
+                    <a href="index.html" class="btn-cancel">Cancelar</a>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="js/pagos.js"></script>
+</body>
+
+</html>

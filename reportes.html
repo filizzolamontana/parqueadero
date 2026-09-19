@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parqueadero San José - Reportes Diarios</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">P</span>
+            </div>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="material-icons-round">dashboard</span>
+                    <span>Panel de Control</span>
+                </a>
+                <a href="ingreso.html" class="nav-link">
+                    <span class="material-icons-round">minor_crash</span>
+                    <span>Ingresar Vehículo</span>
+                </a>
+                <a href="pagos.html" class="nav-link">
+                    <span class="material-icons-round">payments</span>
+                    <span>Control de Pagos</span>
+                </a>
+                <a href="reportes.html" class="nav-link active">
+                    <span class="material-icons-round">analytics</span>
+                    <span>Reportes Diarios</span>
+                </a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-salir HTML-logout">
+                    <span class="material-icons-round">logout</span>
+                    <span>Salir</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <header class="welcome-header">
+            <h1>Reportes Diarios</h1>
+            <p class="text-muted">Cierre de caja y estadísticas de operación del día</p>
+        </header>
+
+        <section class="analytics-container">
+            <div class="stat-card">
+                <span class="material-icons-round icon-orange">monetization_on</span>
+                <div class="stat-info">
+                    <h3>Total Recaudado</h3>
+                    <h2 id="reporte-total-recaudo">$185.000</h2>
+                    <p class="sub-text">Caja general activa</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="material-icons-round icon-blue">local_atm</span>
+                <div class="stat-info">
+                    <h3>Pagos en Efectivo</h3>
+                    <h2 id="reporte-efectivo">$125.000</h2>
+                    <p class="sub-text">Dinero físico en caja</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="material-icons-round icon-green">qr_code_2</span>
+                <div class="stat-info">
+                    <h3>Pagos Digitales</h3>
+                    <h2 id="reporte-digital">$60.000</h2>
+                    <p class="sub-text">Nequi, Daviplata y Tarjetas</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <div class="table-header-title">
+                <h2>Historial de Servicios Liquidados</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora Salida</th>
+                            <th>Placa</th>
+                            <th>Tipo</th>
+                            <th>Método Pago</th>
+                            <th>Total Pagado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-reportes">
+                        <tr>
+                            <td>05:14 PM</td>
+                            <td>ABC123</td>
+                            <td>Automóvil</td>
+                            <td>Efectivo</td>
+                            <td style="font-weight: 600; color: #10b981;">$8.000</td>
+                        </tr>
+                        <tr>
+                            <td>05:30 PM</td>
+                            <td>XYZ789</td>
+                            <td>Motocicleta</td>
+                            <td>Digital</td>
+                            <td style="font-weight: 600; color: #10b981;">$4.500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="logout-footer" style="display: flex; justify-content: flex-end;">
+                <button type="button" id="btn-imprimir-cierre" class="btn-submit" style="display: flex; align-items: center; gap: 8px;">
+                    <span class="material-icons-round" style="font-size: 1.1rem;">print</span>
+                    Imprimir Cierre de Caja
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/reportes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+/* ==========================================
+   RESET GENERAL Y VARIABLES DE COLOR
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8fafc;
+}
+
+
+/* ==========================================
+   PANEL DE CONTROL SUPERIOR (HEADER HORIZONTAL)
+   ========================================== */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #031a49;
+    /* Azul oscuro corporativo */
+    padding: 15px 40px;
+    color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(3, 26, 73, 0.15);
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logo {
+    width: 38px;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-title h2 {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    line-height: 1;
+}
+
+.header-title h1 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+
+/* Menú horizontal */
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.top-menu .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.top-menu .menu-item span {
+    font-size: 18px;
+}
+
+.top-menu .menu-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.top-menu .menu-item.active {
+    background-color: #1a62d6;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+/* Lado derecho del header */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-btn:hover {
+    color: #ffffff;
+}
+
+.notification-btn .badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    background-color: #ef4444;
+    border-radius: 50%;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+.user-avatar {
+    color: #cbd5e1;
+    font-size: 22px !important;
+}
+
+.user-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.logout-btn {
+    color: #94a3b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.logout-btn:hover {
+    color: #f87171;
+}
+
+.logout-text {
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   ÁREA DE CONTENIDO PRINCIPAL (SCROLL AJUSTADO)
+   ========================================== */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BANNER DE BIENVENIDA
+   ========================================== */
+
+.welcome-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 25px 40px;
+    margin-bottom: 25px;
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid #f1f5f9;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.welcome-text h1 {
+    font-size: 20px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.welcome-text h2 {
+    font-size: 30px;
+    color: #031a49;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.welcome-text p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.welcome-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.welcome-image img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   GRID DE TARJETAS (INDEX)
+   ========================================== */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.card-icon-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-icon-wrapper span {
+    font-size: 28px;
+}
+
+.card h3 {
+    font-size: 17px;
+    color: #031a49;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex: 1;
+    /* Empuja la flecha hacia el fondo de la tarjeta */
+}
+
+.card-arrow {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+/* Clases de colores de tarjetas */
+
+.blue {
+    background-color: #eef4ff;
+    color: #1a62d6;
+}
+
+.blue-text {
+    color: #1a62d6;
+}
+
+.green {
+    background-color: #eefdf4;
+    color: #10b981;
+}
+
+.green-text {
+    color: #10b981;
+}
+
+.orange {
+    background-color: #fff7ed;
+    color: #f97316;
+}
+
+.orange-text {
+    color: #f97316;
+}
+
+.purple {
+    background-color: #faf5ff;
+    color: #a855f7;
+}
+
+.purple-text {
+    color: #a855f7;
+}
+
+.teal {
+    background-color: #f0fdfa;
+    color: #14b8a6;
+}
+
+.teal-text {
+    color: #14b8a6;
+}
+
+
+/* ==========================================
+   BARRA INFERIOR / FOOTER
+   ========================================== */
+
+.bottom-security {
+    background-color: #eef4ff;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.security-icon {
+    color: #1a62d6;
+    font-size: 26px !important;
+}
+
+.security-info-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #031a49;
+}
+
+.security-info-text p {
+    font-size: 12px;
+    color: #475569;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-height: 900px) {
+    .main-content {
+        padding: 20px 30px;
+    }
+    .welcome-banner {
+        padding: 20px 35px;
+        margin-bottom: 15px;
+        min-height: 100px;
+    }
+    .welcome-image img {
+        height: 80px;
+    }
+    .cards-grid {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .card {
+        padding: 20px;
+    }
+}

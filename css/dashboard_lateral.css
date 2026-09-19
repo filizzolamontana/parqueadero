@@ -1,0 +1,445 @@
+/* ==========================================
+   RESET GENERAL Y BASE
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ==========================================
+   PANEL DE CONTROL LATERAL (SIDEBAR)
+   ========================================== */
+
+.sidebar {
+    width: 280px;
+    background-color: #031a49;
+    /* Azul oscuro de Figma */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.sidebar-logo {
+    width: 35px;
+    height: auto;
+}
+
+.sidebar-title h2 {
+    font-size: 9px;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.sidebar-title h1 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* Enlaces del menú lateral */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.sidebar-menu .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu .menu-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-menu .menu-item.active {
+    background-color: #1a62d6;
+    /* Azul brillante seleccionado */
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.sidebar-footer .logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    padding-left: 14px;
+    transition: color 0.2s;
+}
+
+.sidebar-footer .logout-btn:hover {
+    color: #f87171;
+}
+
+
+/* ==========================================
+   CONTENEDOR DE CONTENIDO (DERECHA)
+   ========================================== */
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* TOPBAR */
+
+.topbar {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    flex-shrink: 0;
+}
+
+.menu-toggle-btn {
+    background: none;
+    border: none;
+    color: #334155;
+    cursor: pointer;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.notification-btn {
+    background: none;
+    border: none;
+    color: #64748b;
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-btn .badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    background-color: #ef4444;
+    border-radius: 50%;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    color: #64748b;
+    font-size: 24px !important;
+}
+
+.user-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.arrow-icon {
+    font-size: 18px !important;
+    color: #64748b;
+}
+
+
+/* SCROLL DEL CONTENIDO */
+
+.main-content {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+    background-color: #f8fafc;
+}
+
+
+/* ==========================================
+   BANNER DE ENCABEZADO
+   ========================================== */
+
+.page-header-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px 35px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.header-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icon-blue {
+    background-color: #eef4ff;
+    color: #1a62d6;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icon-blue span {
+    font-size: 26px;
+}
+
+.section-header-text h2 {
+    font-size: 24px;
+    color: #081735;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.section-header-text p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.welcome-image img {
+    height: 90px;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   CARD DEL FORMULARIO DE INGRESO
+   ========================================== */
+
+.form-container-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 35px 40px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #081735;
+    margin-bottom: 8px;
+}
+
+.form-group label .required {
+    color: #ef4444;
+}
+
+.form-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.field-icon-label {
+    position: absolute;
+    left: 14px;
+    color: #a0aec0;
+    font-size: 20px !important;
+}
+
+.form-input-wrapper input,
+.form-input-wrapper select {
+    width: 100%;
+    padding: 15px 16px 15px 48px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #1e293b;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+}
+
+.form-input-wrapper select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a0aec0'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.form-input-wrapper input:focus,
+.form-input-wrapper select:focus {
+    border-color: #1a62d6;
+}
+
+
+/* Botones de acción organizados verticalmente como Figma */
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-submit,
+.btn-back {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-submit {
+    background-color: #1a62d6;
+    color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(26, 98, 214, 0.2);
+}
+
+.btn-submit:hover {
+    background-color: #124eb3;
+}
+
+.btn-back {
+    background-color: #f1f5f9;
+    color: #081735;
+}
+
+.btn-back:hover {
+    background-color: #e2e8f0;
+}
+
+
+/* BARRA DE INFORMACIÓN INFERIOR */
+
+.bottom-security {
+    background-color: #f4f7fe;
+    border: 1px solid #e4ecfa;
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.security-icon {
+    color: #1a62d6;
+    font-size: 24px !important;
+}
+
+.security-info-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #081735;
+}
+
+.security-info-text p {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+
+/* RESPONSIVE LAPTOPS */
+
+@media (max-height: 900px) {
+    .main-content {
+        padding: 20px 30px;
+    }
+    .page-header-banner {
+        padding: 18px 30px;
+        margin-bottom: 15px;
+    }
+    .form-container-card {
+        padding: 25px 30px;
+        margin-bottom: 15px;
+    }
+    .form-grid {
+        gap: 16px;
+    }
+    .form-actions {
+        margin-top: 20px;
+    }
+}
